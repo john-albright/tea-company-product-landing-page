@@ -1,0 +1,117 @@
+
+dy {
+  background: linear-gradient(
+    65deg, 
+    rgb(230, 250, 230) 0%,
+    lightgreen 98%
+  );
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100%;
+  padding: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+#header {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: center;
+  column-gap: 20px;
+}
+
+#company-name {
+  font-family: 'Satisfy', sans-serif;
+  font-size: 25px;
+  color: green;
+  align-items: center;
+  border: none;
+}
+
+#company-logo {
+  min-width: 150px;
+  display: flex;
+  align-items: end;
+  border: none;
+}
+
+#nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 5px;
+  align-items: center;
+  border: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin: 0 5px;
+  color: rgb(10, 50, 10);
+}
+
+.nav-link:hover {
+  color: rgb(100, 150, 100);
+}
+
+#header-img {
+  width: 40px;
+  margin: 5px -3px 5px 5px;
+  border: none;
+}
+
+img:not(#header-img) {
+  width: 200px;
+}
+
+#gyokuro-img {
+  border-radius: 50%;
+}
+
+#video {
+  max-width: 100%;
+}
+
+#product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product-title {
+  text-align: center;
+  font-family: 'Comforter Brush', sans-serif;
+  font-size: 40px;
+  color: darkgreen;
+}
+
+#product-grid::after {
+  content: "";
+  width: 462px;
+}
+
+.product-block {
+  padding: 5px;
+  border: 1px solid green;
+  margin: 5px;
+  width: 210px;
+  height: 300px;
+}
+
+@media screen and (max-width: 300px) {
+  #header {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+  }
+}
