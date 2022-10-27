@@ -1,13 +1,30 @@
+:root {
+  --lighter-green: rgb(200, 250, 200);
+  --approx-height-of-navbar: 68px;
+}
 
-dy {
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   background: linear-gradient(
     65deg, 
     rgb(230, 250, 230) 0%,
-    lightgreen 98%
+    var(--lighter-green) 25%
   );
-  font-family: 'Roboto Condensed', sans-serif;
-  width: 100%;
-  padding: auto;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: auto 0; 
+  border: none;
 }
 
 h1 {
@@ -15,43 +32,85 @@ h1 {
 }
 
 section {
-  margin-bottom: 50px;
+  width: 80%;
+  max-width: 800px;
+  margin: auto auto 50px auto;
 }
 
-#header {
+/**
+***  HEADER STYLES
+**/
+
+#header-container {
+  width: 100%;
   display: flex;
   flex-wrap: no-wrap;
   align-items: center;
-  column-gap: 20px;
+  /*column-gap: 20px;*/
+}
+
+#header {
+  width: 100%;
+  background-color: var(--lighter-green);
+  display: absolute;
+  position: fixed;
+  z-index: 1;
+}
+
+/** #header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 5px;
+  align-items: center;
+}**/
+
+/** 
+***  COMPANY LOGO STYLES
+**/
+
+#header-img {
+  width: 40px;
+  margin: 3px -20px 10px 5px;
 }
 
 #company-name {
   font-family: 'Satisfy', sans-serif;
   font-size: 25px;
   color: green;
-  align-items: center;
   border: none;
 }
 
 #company-logo {
-  min-width: 150px;
   display: flex;
-  align-items: end;
+  align-items: center;
+  padding: 10px 0px;
+  min-width: 150px;
   border: none;
 }
+
+#header a {
+  text-decoration: none;
+}
+
+/**
+***  NAVBAR STYLES
+**/
 
 #nav-bar {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 40px;
-  row-gap: 5px;
+  flex-direction: row;
+  margin-left: 20%;
   align-items: center;
+  justify-content: space-between;
+  width: 50%;
   border: none;
+  row-gap: 30px; 
 }
 
 .nav-link {
   text-decoration: none;
-  margin: 0 5px;
   color: rgb(10, 50, 10);
 }
 
@@ -59,26 +118,47 @@ section {
   color: rgb(100, 150, 100);
 }
 
-#header-img {
-  width: 40px;
-  margin: 5px -3px 5px 5px;
-  border: none;
-}
+/** 
+***  IMAGE STYLES 
+**/
 
 img:not(#header-img) {
   width: 200px;
 }
 
-#gyokuro-img {
-  border-radius: 50%;
+#tencha-img, #kukicha-img, #wakoucha-img {
+  padding: 30px;
 }
+
+#matcha-img {
+  padding: 15px;
+}
+
+#banner-img {
+  margin-top: var(--approx-height-of-navbar);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  border: 1px solid green; 
+  box-shadow: 1px 2px 3px green;
+}
+
+/**
+***  VIDEO STYLES
+**/
 
 #video {
   max-width: 100%;
+  margin: auto;
 }
+
+/** 
+***  PRODUCT GRID STYLES
+**/
 
 #product-grid {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
@@ -93,18 +173,94 @@ img:not(#header-img) {
 
 #product-grid::after {
   content: "";
-  width: 462px;
-}
+  width: 220px;
+} /** Styles to add pseudo block when only 2 tiles can fit on the page */
 
 .product-block {
   padding: 5px;
   border: 1px solid green;
   margin: 5px;
   width: 210px;
-  height: 300px;
+  height: 350px;
 }
 
-@media screen and (max-width: 300px) {
+.japanese-text {
+  font-family: 'Moto Serif';
+  font-size: 25px; 
+  margin-bottom: -20px;
+  color: darkgreen;
+}
+
+/** 
+***  FORM STYLES
+**/
+
+#welcome-banner {
+  position: relative;
+}
+
+#form {
+  background-color: var(--lighter-green); 
+  opacity: 0.93;
+  border-radius: 5px; 
+  padding: 10px;  
+  margin: 0 30%; 
+  position: absolute;
+  top: calc(31% + var(--approx-height-of-navbar)); 
+  left: 0%; 
+}
+
+#form > * {
+  display: block;
+  margin: 8px auto;
+}
+
+#email {
+  font-size: 16px; 
+  line-height: 2;
+  text-align: center;
+  border-radius: 2px; 
+  border: none; 
+}
+
+#submit {
+  color: linen;
+  font-size: 18px; 
+  background-color: darkgreen; 
+  border: 1px solid seagreen;
+  border-radius: 2px; 
+}
+
+#submit:hover {
+  background-color: seagreen;
+  cursor: pointer; 
+  transition-duration: 0.4s;
+  transition-timing-function: linear; 
+}
+
+/**
+***  MEDIA QUERIES
+**/
+
+@media screen and (max-width: 505px) {
+  
+  #header-img {
+    width: 75px;
+  }
+
+  #banner-img {
+    margin-top: 100px;
+  }
+
+  #company-name {
+    font-size: 50px;
+    margin-left: -10px; 
+  }
+
+  .product-block {
+    width: 80%;
+  }
+
   #header {
     flex-wrap: wrap;
     flex-direction: column;
@@ -113,5 +269,13 @@ img:not(#header-img) {
 
   #nav-bar {
     flex-direction: column;
+    margin-left: 0px;
+    font-size: 1.5rem;
   }
+
+  #form {
+    margin: 0 20%; 
+    top: 40%; 
+  }
+
 }

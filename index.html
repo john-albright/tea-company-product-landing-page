@@ -7,30 +7,39 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Noto+Serif+JP&family=Comforter+Brush&family=Roboto+Condensed&family=Open+Sans&&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header id="header">
-      <div id="company-logo">
-        <img id="header-img" src="https://www.pinclipart.com/picdir/big/423-4238549_and-fuding-cup-tea-material-infusion-vector-tea.png" />
-        <span id="company-name">TheaThyme</span>
-      </div>
+      <div id="header-container">
+      <a href="">
+        <div id="company-logo">
+            <img id="header-img" src="https://www.pinclipart.com/picdir/big/423-4238549_and-fuding-cup-tea-material-infusion-vector-tea.png" />
+            <span id="company-name">TheaThyme</span>
+        </div>
+      </a>
       <nav id="nav-bar">
-        <!-- <i class="fas fa-coffee"></i> -->
         <a class="nav-link" href="#section-1">Company</a>
         <a class="nav-link" href="#section-2">Promotion</a>
         <a class="nav-link" href="#section-3">Products</a>
       </nav>
+      </div>
     </header>
+    <div id="welcome-banner">
+      <img id="banner-img" src="./photos/tea-field-and-sunset.jpeg">
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <label for="email"> Please enter our mailing list to stay up to date with our products and offers!</label>
+        <input type="email" id="email" placeholder="ilovetea@ilovetea.net" required />
+        <input type="submit" id="submit" text="Join Now!" />
+      </form>
+    </div>
     <section id="section-1">
       <h1>Our Company</h1>
       <h3>Quality</h3>
-      <p>Our product...</p>
-      <h3>Community</h3>
-      <p>Our product...</p>
+      <p>We at TheaThyme pride ourselves in high-quality tea. We take the time required to harvest tea leaves to be later processed in conditions sensitive to the nature of green tea. </p>
+      <h3>Origin</h3>
+      <p>All of our teas are sourced from regions in the southwest of Japan, primarily Sizuoka and Kagoshima. Some other teas are grown in Mie, Kyoto, and Fukuoka. </p>
       <h3>Sustainability</h3>
       <p>Our product...</p>
     </section>
@@ -43,23 +52,66 @@
       <h1>Current Sales</h1>
       <div id="product-grid">
         <div class="product-block">
-          <div class="product-title">Matcha</div>
-          <img src="https://obubutea.com/wp-content/uploads/2015/04/gokou-1.png" alt="gokou matcha">
-          <div>Price: </div>
+          <div class="product-title">Sencha</div>
+          <div class="japanese-text">煎茶</div>
+          <img src="https://obubutea.com/wp-content/uploads/2015/03/Kabuse-Sencha.png" alt="kabuse sencha">
+          <div>Standard Green Tea</div>
+          <div>Price:</div>
+        </div>
+        <div class="product-block">
+          <div class="product-title">Tencha</div>
+          <div class="japanese-text">碾茶</div>
+          <img id="tencha-img" src="./photos/tencha-traced-2.png" alt="tencha">
+          <div>Shaded & Dried Green Tea</div>
+          <div>Price:</div>
+        </div>
+        <div class="product-block">
+          <div class="product-title">Bancha</div>
+          <div class="japanese-text">番茶</div>
+          <img src="https://obubutea.com/wp-content/uploads/2015/04/Yanagi-Bancha.png" alt="yanagi bancha">
+          <div>Late Season Green Tea</div>
+          <div>Price:</div>
+        </div>
+        <div class="product-block">
+          <div class="product-title">Kukicha</div>
+          <div class="japanese-text">茎茶</div>
+          <img id="kukicha-img" src="./photos/kukicha-tsubame-traced-1.png" alt="tsubame bancha">
+          <div>Stem Tea</div>
+          <div>Price:</div>
         </div>
         <div class="product-block">
           <div class="product-title">Gyokuro</div>
-          <img id="gyokuro-img" src="https://obubutea.com/wp-content/uploads/2021/08/Aibo-Gyokuro-1.jpg" alt="heavenly drop gyokuro">
+          <div class="japanese-text">玉露</div>
+          <img id="gyokuro-img" src="./photos/gyokuro-aibo-traced-1.png" alt="heavenly drop gyokuro">
+          <div>High-grade Shaded Green Tea</div>
           <div>Price: </div>
         </div>
         <div class="product-block">
           <div class="product-title">Hojicha</div>
+          <div class="japanese-text">焙じ茶</div>
           <img src="https://obubutea.com/wp-content/uploads/2015/04/hojicha-gold.png" alt="hojicha gold">
+          <div>Roasted Green Tea</div>
           <div>Price: </div>
         </div>
         <div class="product-block">
           <div class="product-title">Genmaicha</div>
+          <div class="japanese-text">玄米茶</div>
           <img src="https://obubutea.com/wp-content/uploads/2015/04/Genmaicha.png" alt="genmaicha">
+          <div>Green & Brown Rice Tea</div>
+          <div>Price: </div>
+        </div>
+        <div class="product-block">
+          <div class="product-title">Wakoucha</div>
+          <div class="japanese-text">和紅茶</div>
+          <img id="wakoucha-img" src="./photos/wakoucha-traced-1.png" alt="fern shoot wakoucha">
+          <div>Japanese Black Tea</div>
+          <div>Price:</div>
+        </div>
+        <div class="product-block">
+          <div class="product-title">Matcha</div>
+          <div class="japanese-text">抹茶</div>
+          <img id="matcha-img" src="https://obubutea.com/wp-content/uploads/2015/04/gokou-1.png" alt="gokou matcha">
+          <div>Powdered Green Tea Leaves</div>
           <div>Price: </div>
         </div>
       </div>
