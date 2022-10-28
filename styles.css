@@ -1,6 +1,7 @@
 :root {
   --lighter-green: rgb(200, 250, 200);
   --approx-height-of-navbar: 68px;
+  --product-block-width: 210px;
 }
 
 * {
@@ -34,7 +35,17 @@ h1 {
 section {
   width: 80%;
   max-width: 800px;
+  padding-top: var(--approx-height-of-navbar);
   margin: auto auto 50px auto;
+}
+
+section a {
+  text-decoration: none;
+  color: rgb(10, 100, 10);
+}
+
+section a:hover {
+  color: rgb(50, 150, 50);
 }
 
 /**
@@ -56,14 +67,6 @@ section {
   position: fixed;
   z-index: 1;
 }
-
-/** #header {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  row-gap: 5px;
-  align-items: center;
-}**/
 
 /** 
 ***  COMPANY LOGO STYLES
@@ -105,8 +108,7 @@ section {
   align-items: center;
   justify-content: space-between;
   width: 50%;
-  border: none;
-  row-gap: 30px; 
+  border: none; 
 }
 
 .nav-link {
@@ -130,8 +132,23 @@ img:not(#header-img) {
   padding: 30px;
 }
 
+/**
+
+Styles for freeCodeCamp
+
+#tencha-img, #kukicha-img, #wakoucha-img, #gyokuro-img {
+  padding: 30px;
+  border-radius: 50%;
+}
+
+**/
+
 #matcha-img {
   padding: 15px;
+}
+
+#gyokuro-img {
+  border-radius: 50%;
 }
 
 #banner-img {
@@ -171,23 +188,53 @@ img:not(#header-img) {
   color: darkgreen;
 }
 
-#product-grid::after {
-  content: "";
-  width: 220px;
-} /** Styles to add pseudo block when only 2 tiles can fit on the page */
-
 .product-block {
+  position: relative;
   padding: 5px;
   border: 1px solid green;
   margin: 5px;
-  width: 210px;
-  height: 350px;
+  width: var(--product-block-width);
+  height: 405px;
+}
+
+#product-grid::after {
+  content: "";
+  width: calc(var(--product-block-width) + 10px);
+} /** Styles to add pseudo block when only 2 tiles can fit on the page */
+
+.product-info {
+  position: absolute;
+  height: 35%;
+  top: 65%; 
+  width: 95%;
 }
 
 .japanese-text {
   font-family: 'Moto Serif';
   font-size: 25px; 
   margin-bottom: -20px;
+  z-index: 1;
+  color: darkgreen;
+}
+
+.english-translation {
+  font-size: 16px;
+  font-weight: 900;
+  color: rgb(10, 50, 10);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.tea-description {
+  font-size: 10px;
+}
+
+.product-price {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Special Elite', sans-serif;
   color: darkgreen;
 }
 
@@ -249,7 +296,8 @@ img:not(#header-img) {
   }
 
   #banner-img {
-    margin-top: 100px;
+    margin-top: 40%;
+    height: 70%;
   }
 
   #company-name {
@@ -262,6 +310,10 @@ img:not(#header-img) {
   }
 
   #header {
+    height: 30%;
+  }
+
+  #header-container {
     flex-wrap: wrap;
     flex-direction: column;
     justify-items: center;
@@ -275,7 +327,21 @@ img:not(#header-img) {
 
   #form {
     margin: 0 20%; 
-    top: 40%; 
+    top: 49%; 
   }
+
+  section {
+    padding-top: 28%;
+  }
+
+  /** 
+
+  Styles for freeCodeCamp
+
+  .nav-link {
+    margin-top: -5px;
+  }
+
+  **/
 
 }

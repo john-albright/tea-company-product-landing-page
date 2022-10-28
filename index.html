@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Noto+Serif+JP&family=Comforter+Brush&family=Roboto+Condensed&family=Open+Sans&&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Noto+Serif+JP&family=Comforter+Brush&family=Roboto+Condensed&family=Open+Sans&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -20,9 +20,9 @@
         </div>
       </a>
       <nav id="nav-bar">
-        <a class="nav-link" href="#section-1">Company</a>
-        <a class="nav-link" href="#section-2">Promotion</a>
-        <a class="nav-link" href="#section-3">Products</a>
+        <a class="nav-link" href="#company">Company</a>
+        <a class="nav-link" href="#promotion">Promotion</a>
+        <a class="nav-link" href="#products">Products</a>
       </nav>
       </div>
     </header>
@@ -34,85 +34,180 @@
         <input type="submit" id="submit" text="Join Now!" />
       </form>
     </div>
-    <section id="section-1">
-      <h1>Our Company</h1>
+    <section id="company">
+      <h1>Company</h1>
       <h3>Quality</h3>
-      <p>We at TheaThyme pride ourselves in high-quality tea. We take the time required to harvest tea leaves to be later processed in conditions sensitive to the nature of green tea. </p>
+      <p>
+        We at TheaThyme pride ourselves in high-quality teas. We take the time required to properly grow,shade, harvest, heat, and process tea leaves to create the finest teas. We offer classic Japanese teas that are sourced ethically with the farmers' well-being in mind. We strive to allow our farmers the independence to grow their tea farms with new materials, technology, and techniques.
+      </p>
       <h3>Origin</h3>
-      <p>All of our teas are sourced from regions in the southwest of Japan, primarily Sizuoka and Kagoshima. Some other teas are grown in Mie, Kyoto, and Fukuoka. </p>
-      <h3>Sustainability</h3>
-      <p>Our product...</p>
+      <p>
+        All of our teas are sourced from regions in the southwest of Japan, primarily Shizuoka and Kagoshima. Some other teas are grown in Mie, Kyoto, and Fukuoka. Fukuoka is our hot spot for gyokuro, a tea that requires long and precise shading to retain sweetness and increase the caffeine content. Read more about Japanese Tea Growing Regions from the <a href="https://gjtea.org/info/japanese-tea-information/japanese-tea-growing-regions/">Global Japanese Tea Association</a>.
+      </p>
+      <h3>Awareness & Education</h3>
+      <p>
+        TheaThyme strives to share Japanese culture with the rest of the world through a product that has become integrated into and associated with Japanese culture. Through our efforts, we hope that others can learn about the complexity of Japanese tea and its place in Japan and its extension into other parts of the world. 
+      </p>
     </section>
-    <section id="section-2">
+    <section id="promotion">
       <h1>Promotion</h1>
-      <p>Watch to learn more about our product.</p>
-      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/otxM65Fy_Ec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>
+        Watch a video created by <a href="https://www.youtube.com/c/NioteasTV" target="_blank">Nioteas TV</a> to learn more about common types of green teas that are available.
+      </p>
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/0XtC8PnqE7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>
+        As you may now realize, green tea preparation can be much more complex than it might seem to the everyday tea drinker. There are many more types than those shown in this video, but our company's goal is to simplify the tea purchasing process by only offering one kind of tea within each category. Refer to the <a href="#products">Products</a> section below to see our offerings. 
+      </p>
     </section>
-    <section id="section-3">
-      <h1>Current Sales</h1>
+    <section id="products">
+      <h1>Products</h1>
+      <p>
+        All prices below are set for 50-gram looseleaf packages of the corresponding tea. To read more about the various types of green tea, refer to <a href="https://obubutea.com/" target="_blank">Kyoto Obubu Tea Farms</a> and <a href="https://nioteas.com/" target="_blank">Nioteas</a>. 
+      </p>
       <div id="product-grid">
         <div class="product-block">
           <div class="product-title">Sencha</div>
           <div class="japanese-text">煎茶</div>
           <img src="https://obubutea.com/wp-content/uploads/2015/03/Kabuse-Sencha.png" alt="kabuse sencha">
-          <div>Standard Green Tea</div>
-          <div>Price:</div>
+          <div class="product-info">
+            <div class="english-translation">
+              Standard Green Tea
+            </div>
+            <div class="tea-description">
+              Sencha is the most commonly grown tea in Japan, accounting for 80% of its green tea. There are many types of sencha.
+            </div>
+            <div class="product-price">
+              $3
+            </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Tencha</div>
           <div class="japanese-text">碾茶</div>
           <img id="tencha-img" src="./photos/tencha-traced-2.png" alt="tencha">
-          <div>Shaded & Dried Green Tea</div>
-          <div>Price:</div>
+          <div class="product-info">
+              <div class="english-translation">
+                Shaded & Dried Green Tea
+              </div>
+              <div class="tea-description">
+                Tencha is made of the most tender tea leaves of plants that have been shaded for 3-4 weeks. The leaves are unstemmed and steamed to prevent oxidation.
+              </div>
+              <div class="product-price">
+                $9
+              </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Bancha</div>
           <div class="japanese-text">番茶</div>
           <img src="https://obubutea.com/wp-content/uploads/2015/04/Yanagi-Bancha.png" alt="yanagi bancha">
-          <div>Late Season Green Tea</div>
-          <div>Price:</div>
+          <div class="product-info">
+            <div class="english-translation">
+              Late Season Green Tea
+            </div>
+            <div class="tea-description">
+              Bancha is made from later harvests of green tea, i.e. late spring through autumn. 
+            </div>
+            <div class="product-price">
+              $4
+            </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Kukicha</div>
           <div class="japanese-text">茎茶</div>
-          <img id="kukicha-img" src="./photos/kukicha-tsubame-traced-1.png" alt="tsubame bancha">
-          <div>Stem Tea</div>
-          <div>Price:</div>
+          <img id="kukicha-img" src="./photos/kukicha-tsubame-traced-1.png" alt="tsubame kukicha">
+          <div class="product-info">
+            <div class="english-translation">
+              Stem Tea
+            </div>
+            <div class="tea-description">
+              Kukicha is made from the leaves and stems of green tea plants. It's lower in caffeine and has a woodier flavor profile.
+            </div>
+            <div class="product-price">
+              $7
+            </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Gyokuro</div>
           <div class="japanese-text">玉露</div>
           <img id="gyokuro-img" src="./photos/gyokuro-aibo-traced-1.png" alt="heavenly drop gyokuro">
-          <div>High-grade Shaded Green Tea</div>
-          <div>Price: </div>
+          <div class="product-info">
+            <div class="english-translation">
+              Dew Drop Green Tea
+            </div>
+            <div class="tea-description">
+              Gyokuro is made of the uppermost green tea leaves that have been shaded for 21+ days. These leaves are then steamed, dried, and rolled to make a sweeter tea high in caffeine. 
+            </div>
+            <div class="product-price">
+              $19
+            </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Hojicha</div>
           <div class="japanese-text">焙じ茶</div>
           <img src="https://obubutea.com/wp-content/uploads/2015/04/hojicha-gold.png" alt="hojicha gold">
-          <div>Roasted Green Tea</div>
-          <div>Price: </div>
+          <div class="product-info">
+            <div class="english-translation">
+              Roasted Green Tea
+            </div>
+            <div class="tea-description">
+              Hojicha is any green tea that has been roasted after steaming and drying. This tea is often compared to coffee for the roasting brings out caramel and chocolate notes. 
+            </div>
+            <div class="product-price">
+              $5
+            </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Genmaicha</div>
           <div class="japanese-text">玄米茶</div>
           <img src="https://obubutea.com/wp-content/uploads/2015/04/Genmaicha.png" alt="genmaicha">
-          <div>Green & Brown Rice Tea</div>
-          <div>Price: </div>
+          <div class="product-info">
+            <div class="english-translation">
+              Brown Rice Green Tea
+            </div>
+            <div class="tea-description">
+              Genmaicha is the combination of green tea with toasted white mochi rice. It's lower in caffeine due to fewer green tea leaves and is often dubbed 'popcorn tea.'
+            </div>
+            <div class="product-price">
+              $4
+            </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Wakoucha</div>
           <div class="japanese-text">和紅茶</div>
           <img id="wakoucha-img" src="./photos/wakoucha-traced-1.png" alt="fern shoot wakoucha">
-          <div>Japanese Black Tea</div>
-          <div>Price:</div>
+          <div class="product-info">
+            <div class="english-translation">
+              Japanese Black Tea
+            </div>
+            <div class="tea-description">
+              Wakoucha actually translates to 'Japanese crimson red tea.' It's the Japanese rendition of black tea and therefore, is tea that has been fully oxidized. 
+            </div>
+            <div class="product-price">
+              $10
+            </div>
+          </div>
         </div>
         <div class="product-block">
           <div class="product-title">Matcha</div>
           <div class="japanese-text">抹茶</div>
           <img id="matcha-img" src="https://obubutea.com/wp-content/uploads/2015/04/gokou-1.png" alt="gokou matcha">
-          <div>Powdered Green Tea Leaves</div>
-          <div>Price: </div>
+          <div class="product-info">
+            <div class="english-translation">
+              Ground Green Tea Leaves
+            </div>
+            <div class="tea-description">
+              Matcha is ground tencha and is consumed whole. It plays an important part in a tea ceremony called sado (茶道) and is often used to make tea lattes with water or milk. 
+            </div>
+            <div class="product-price">
+              $24
+            </div>
+          </div>
         </div>
       </div>
     </section>
