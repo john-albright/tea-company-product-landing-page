@@ -194,7 +194,7 @@ Styles for freeCodeCamp
   border: 1px solid green;
   margin: 5px;
   width: var(--product-block-width);
-  height: 405px;
+  height: 500px;
 }
 
 #product-grid::after {
@@ -225,7 +225,7 @@ Styles for freeCodeCamp
 }
 
 .tea-description {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .product-price {
@@ -306,6 +306,7 @@ Styles for freeCodeCamp
   }
 
   .product-block {
+    height: 400px;
     width: 80%;
   }
 
